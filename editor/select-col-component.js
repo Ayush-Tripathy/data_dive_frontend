@@ -1,6 +1,8 @@
 class SelectColumnComponent extends Rete.Component {
     constructor(key) {
         super(`SelectColumn-${key}`);
+        // super(`SelectColumn`);
+        // this.editor = editor;
         this.data.component = CustomNode;
         this.columns = "";
         this.html = "";

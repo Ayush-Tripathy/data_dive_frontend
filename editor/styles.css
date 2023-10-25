@@ -3,6 +3,10 @@
     --bg-color: #ffffff;
 }
 
+.not-supported-screen {
+    display: none;
+}
+
 html,
 body {
     height: 100%;
@@ -252,6 +256,15 @@ input {
     display: none;
 }
 
+.to-csv-download-btn {
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    background-color: #dddddd;
+    border-radius: 25px;
+    margin: 50px;
+}
+
 .loading-svg {
     position: relative;
     z-index: 10000;
@@ -321,6 +334,18 @@ input {
     max-height: 300px;
     overflow: hidden;
     overflow-y: auto;
+}
+
+.node .controls input[type="file"] {
+    width: 250px;
+}
+
+#overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    z-index: 1000;
 }
 
 #display-modal {
@@ -412,8 +437,21 @@ input {
 }
 
 @media only screen and (max-width: 768px) {
-    .side-panel {
-        width: 50px;
+    .not-supported-screen {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
+    .not-supported-screen a {
+        text-decoration: underline;
+    }
+
+    .wrapper {
+        display: none;
+    }
 }

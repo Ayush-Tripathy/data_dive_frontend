@@ -61,6 +61,8 @@ var SelectRowNode = {
 class SelectRowsComponent extends Rete.Component {
     constructor(key) {
         super(`SelectRows-${key}`);
+        // super(`SelectRows`);
+        // this.editor = editor;
         this.data.component = SelectRowNode;
         this.conditions = {};
         this.data.columns = [];

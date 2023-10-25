@@ -1,6 +1,8 @@
 class FileComponent extends Rete.Component {
     constructor(key) {
         super(`File-${key}`);
+        // super(`File`);
+        // this.editor = editor;
         this.data.component = CustomNode;
         this.prevFile = "";
         this.output = "";
