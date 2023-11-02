@@ -20,11 +20,24 @@
         </div>
 
         <div class="main-text-div">
+            <div id="credits-modal">
+                <div id="credits-modal-content">
+                    <div id="credits-modal-close">&times;</div>
+                    <h1>Credits</h1>
+                    <div id="credit-names">
+                        <span>Ayush Tripathy</span>
+                        <span>Dev Aryan Sahu</span>
+                        <span>Satya Ranjan Das</span>
+                        <span>Bismay Sarangi</span>
+                        <span>Aryan Raj</span>
+                    </div>
+                </div>
+            </div>
             <h1>Visualize your data<br />
                 Effortlessly</h1>
             <p>
-                Upload your CSV or Excel files and watch as our platform converts your data into informative and
-                eye-catching graphs. Visualize trends, patterns, and insights with ease.
+                Upload your CSV and watch as this software converts your data into informative and
+                eye-catching graphs. Analyse trends, patterns, and insights with ease.
             </p>
 
             <a class="go-to-editor-btn" href="../editor/index.html">Get Started</a>
@@ -35,6 +48,20 @@
         <img id="asset-3" src="./assets/Asset41.svg" alt="asset-3" />
         <img id="asset-4" src="./assets/Layer2.svg" alt="asset-4" />
     </div>
+
+    <script>
+        const creditsBtn = document.getElementById("credits-btn");
+        const creditsModal = document.getElementById("credits-modal");
+        const creditsModalClose = document.getElementById("credits-modal-close");
+
+        creditsBtn.addEventListener("click", () => {
+            creditsModal.style.display = "block";
+        });
+
+        creditsModalClose.addEventListener("click", () => {
+            creditsModal.style.display = "none";
+        });
+    </script>
 </body>
 
 </html>

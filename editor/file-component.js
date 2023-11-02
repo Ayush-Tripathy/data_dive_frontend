@@ -25,7 +25,7 @@ class FileComponent extends Rete.Component {
             const formData = new FormData();
             formData.append('file', node.data[`file-${node.id}`]);
 
-            await fetch('http://localhost:5000/upload', {
+            await fetch('https://ayushtripathy.pythonanywhere.com/upload', {
                 method: 'POST',
                 body: formData
             })

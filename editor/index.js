@@ -22,7 +22,7 @@ const loader = createLoader("main-loader-1");
 const overlay = document.getElementById('overlay');
 overlay.appendChild(loader);
 (async () => {
-    await fetch('http://localhost:5000/', {
+    await fetch('https://ayushtripathy.pythonanywhere.com/', {
         method: 'GET'
     })
         .then(response => response.json())

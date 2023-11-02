@@ -56,7 +56,7 @@ class InfoComponent extends Rete.Component {
         this.prevHtml = this.html;
         if (this.html !== undefined) {
             document.getElementById(`info-${node.id}`).appendChild(this.loader);
-            await fetch("http://localhost:5000/get_info", {
+            await fetch("https://ayushtripathy.pythonanywhere.com/get_info", {
                 method: "POST",
                 body: this.html
             })

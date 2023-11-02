@@ -104,7 +104,7 @@ class SelectRowsComponent extends Rete.Component {
             }
 
             document.getElementById(`${node.id}`).appendChild(this.loader);
-            await fetch('http://localhost:5000/columns', {
+            await fetch('https://ayushtripathy.pythonanywhere.com/columns', {
                 method: 'POST',
                 body: this.html,
             })
@@ -125,7 +125,7 @@ class SelectRowsComponent extends Rete.Component {
 
             this.data.columns.forEach(column => {
                 requests.push({
-                    url: 'http://localhost:5000/get_operators',
+                    url: 'https://ayushtripathy.pythonanywhere.com/get_operators',
                     body: {
                         col: column,
                         html: this.html
@@ -288,7 +288,7 @@ class SelectRowsComponent extends Rete.Component {
 
                 outputs[`table-${node.id}`] = "Fetching data...";
                 document.getElementById(`${node.id}`).appendChild(this.loader);
-                await fetch('http://localhost:5000/select_rows', {
+                await fetch('https://ayushtripathy.pythonanywhere.com/select_rows', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -315,7 +315,7 @@ class SelectRowsComponent extends Rete.Component {
             if (!this.objectsAreEqual(this.conditions, {}) && this.html !== "" && this.html.length !== 0 && this.html[0] !== "No data available") {
                 outputs[`table-${node.id}`] = "Fetching data...";
                 document.getElementById(`${node.id}`).appendChild(this.loader);
-                await fetch('http://localhost:5000/select_rows', {
+                await fetch('https://ayushtripathy.pythonanywhere.com/select_rows', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

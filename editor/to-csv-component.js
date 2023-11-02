@@ -100,7 +100,7 @@ class ToCSVComponent extends Rete.Component {
         this.prevHtml = this.html;
         if (this.html !== undefined) {
             document.getElementById(`tocsv-${node.id}`).appendChild(this.loader);
-            await fetch("http://localhost:5000/to_csv", {
+            await fetch("https://ayushtripathy.pythonanywhere.com/to_csv", {
                 method: "POST",
                 body: this.html
             })

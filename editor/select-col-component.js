@@ -37,7 +37,7 @@ class SelectColumnComponent extends Rete.Component {
 
             document.getElementById(`${node.id}`).appendChild(this.loader);
             // console.log("loader: ", document.getElementById(`${node.id}`));
-            await fetch('http://localhost:5000/columns', {
+            await fetch('https://ayushtripathy.pythonanywhere.com/columns', {
                 method: 'POST',
                 body: this.html,
             })
@@ -102,7 +102,7 @@ class SelectColumnComponent extends Rete.Component {
             if (this.selectedColumns.length !== 0) {
                 outputs[`table-${node.id}`] = "Fetching data...";
                 document.getElementById(`${node.id}`).appendChild(this.loader);
-                await fetch('http://localhost:5000/select_columns', {
+                await fetch('https://ayushtripathy.pythonanywhere.com/select_columns', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -142,7 +142,7 @@ class SelectColumnComponent extends Rete.Component {
             if (this.selectedColumns.length !== 0) {
                 outputs[`table-${node.id}`] = "Fetching data...";
                 document.getElementById(`${node.id}`).appendChild(this.loader);
-                await fetch('http://localhost:5000/select_columns', {
+                await fetch('https://ayushtripathy.pythonanywhere.com/select_columns', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
